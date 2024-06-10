@@ -1,0 +1,205 @@
+body {
+    background-image: url('photos/background-img.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    font-family: Arial, sans-serif;
+    color: white; 
+    transition: background-position 1s ease-in-out;
+}
+
+#logo {
+	margin: 2% auto auto 2%;
+	width: 6%;
+	height: 6%;
+	border-radius: 10%;
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 12.5%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: min-content;
+}
+
+.menu a {
+    display: block;
+    font-family: 'league gothic', helvetica, serif;
+    font-size: 5vmin;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--menu);
+    padding: .5rem 0;
+    transform: scale(.95);
+    opacity: .5;
+    transition: scale 550ms linear, opacity 250ms linear;
+}
+
+.last-touched {
+	color: pink;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.menu:hover a:not(:hover) {
+    transform: scale(.95);
+    opacity: .5;
+}
+
+.menu a:hover {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.background_info {
+	right: 5%;
+	width: 55%;
+	position: absolute;
+	z-index: 0;
+	height: 100%;
+	top: 0;
+	background-color: rgba(0,0,0, 0.7);
+}
+
+.info {
+	z-index: 1;
+    position: absolute;
+    right: 5%;
+    top:35%;
+    font-size: 32px;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 49%;
+    background-color: rgba(0,0,0, 0);
+    color: white;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.info.show {
+    animation: slideIn 1s forwards;
+}
+
+.info.hide {
+    animation: slideOut 1s forwards;
+}
+
+
+#info-photos * {
+  box-sizing: border-box;
+}
+
+.mySlides {
+	justify-content:center;
+	height: 4%;
+	display: none;
+}
+
+img {	
+
+	height: 5%;
+	width: 40%;
+
+}
+
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
