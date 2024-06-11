@@ -4,6 +4,7 @@
 		<title>justcgh9</title>
 		<link rel="icon" href="photos/dino.svg" type="image/svg+xml">
 		<link rel="stylesheet" href="style.css"/>
+
 	</head>
 	<body>
 		<header>
@@ -18,75 +19,39 @@
 			</nav>
 		</header>
 		<main>
-			<div class="background_info"></div>
-			<div class="info" id="info-about">I'm a fun guy. I really enjon web development and learning new things. I am an adept of speedcubing and a huge fan of netflix and chill.</div>
+			<button id="prev_btn1" class="btn">&#10094;</button>
+			<!-- <div class="background_info"></div> -->
+			<!-- <div class="info" id="info-about">I'm a fun guy. I really enjon web development and learning new things. I am an adept of speedcubing and a huge fan of netflix and chill.</div> -->
 			<div class="info" id="info-photos">
 
-				<!-- Full-width images with number text -->
-				<div class="mySlides">
-					<div class="numbertext">1 / 6</div>
-					<img src="photos/img1.jpg" style="width:100%; height:40%;">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">2 / 6</div>
-					<img src="photos/img2.jpg" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">3 / 6</div>
-					<img src="photos/img3.jpg" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">4 / 6</div>
-					<img src="photos/img4.jpg" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">5 / 6</div>
-					<img src="photos/img5.jpg" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">6 / 6</div>
-					<img src="photos/img6.jpg" style="width:100%">
-				</div>
-
-				<!-- Next and previous buttons -->
-				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-				<!-- Image text -->
-				<div class="caption-container">
-					<p id="caption"></p>
-				</div>
-
-				<!-- Thumbnail images -->
-				<div class="row">
-					<div class="column">
-						<img class="demo cursor" src="photos/img1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+				<div class="gallery_cont">
+					<div class="photo_main">
+						<button id="prev_btn" class="btn">&#10094;</button>
+						<img src="photos/img0.jpg" alt="Photo 1" id="active_photo">
+						<button id="next_btn" class="btn">&#10095;</button>
 					</div>
-					<div class="column">
-						<img class="demo cursor" src="photos/img2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+				</div>
+
+				<!-- <div class="gallery-container">
+					<div class="main-photo">
+						<img src="photos/photo1.jpg" alt="Photo 1" class="active">
+						<div class="caption">Caption for Photo 1</div>
+						<a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+						<a class="next" onclick="changeSlide(1)">&#10095;</a>
 					</div>
-					<div class="column">
-						<img class="demo cursor" src="photos/img3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+					<div class="thumbnail-container">
+						<img src="photos/img1.jpg" alt="Photo 1" onclick="currentSlide(1)" class="thumbnail">
+						<img src="photos/img2.jpg" alt="Photo 2" onclick="currentSlide(2)" class="thumbnail">
+						<img src="photos/img3.jpg" alt="Photo 3" onclick="currentSlide(3)" class="thumbnail">
+						<img src="photos/img4.jpg" alt="Photo 4" onclick="currentSlide(4)" class="thumbnail">
 					</div>
-					<div class="column">
-						<img class="demo cursor" src="photos/img4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-					</div>
-					<div class="column">
-						<img class="demo cursor" src="photos/img5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-					</div>
-					<div class="column">
-						<img class="demo cursor" src="photos/img6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-					</div>
-				</div>	
+				</div> -->
 			</div>
-			<div class="info" id="info-portfolio">Information about portfolio...</div>
-			<div class="info" id="info-contact">Information about contact...</div>
+			
+			<!-- <div class="info" id="info-portfolio">Information about portfolio...</div>
+			<div class="info" id="info-contact">Information about contact...</div> -->
 		</main>
-		<script src="script.js" defer></script>
+		
 	</body>
+	<script src="script.js"></script>
 </html>
