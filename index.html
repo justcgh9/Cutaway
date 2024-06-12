@@ -3,90 +3,85 @@
 	<head>
 		<title>justcgh9</title>
 		<link rel="icon" href="photos/dino.svg" type="image/svg+xml">
-		<link rel="stylesheet" href="style.css"/>
+		<link rel="stylesheet" href="style2.css"/>
+
 	</head>
-	<body>
-		<header>
+    <body>
+        <div id="rectangle"></div>
+        <header>
 			<img id="logo" src="photos/dino.svg" alt="Dinosaurrr...">
-			<nav class="menu">
-				<ul>
-					<a href="#" id="about">About me</a>
-					<a href="#" id="photos">Photos</a>
-					<a href="#" id="portfolio">Portfolio</a>
-					<a href="#" id="contact">Contact me</a>
-				</ul>
-			</nav>
+            <div class="text_shifted">
+                <h1 id="name">Alisher Kabardiyadi</h1>
+            </div>
 		</header>
-		<main>
-			<div class="background_info"></div>
-			<div class="info" id="info-about">I'm a fun guy. I really enjon web development and learning new things. I am an adept of speedcubing and a huge fan of netflix and chill.</div>
-			<div class="info" id="info-photos">
-
-				<!-- Full-width images with number text -->
-				<div class="mySlides">
-					<div class="numbertext">1 / 6</div>
-					<img src="photos/img1.jpg" style="width:100%; height:40%;">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">2 / 6</div>
-					<img src="photos/img2.jpg" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">3 / 6</div>
-					<img src="photos/img3.jpg" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">4 / 6</div>
-					<img src="photos/img4.jpg" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">5 / 6</div>
-					<img src="photos/img5.jpg" style="width:100%">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">6 / 6</div>
-					<img src="photos/img6.jpg" style="width:100%">
-				</div>
-
-				<!-- Next and previous buttons -->
-				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-				<!-- Image text -->
-				<div class="caption-container">
-					<p id="caption"></p>
-				</div>
-
-				<!-- Thumbnail images -->
-				<div class="row">
-					<div class="column">
-						<img class="demo cursor" src="photos/img1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+        <main>
+            <section class="navigation">
+                <nav class="menu">
+					<ul>
+						<a href="#" id="about">About me</a>
+						<a href="#" id="photos">Photos</a>
+						<a href="#" id="portfolio">Portfolio</a>
+						<a href="#" id="contact">Contact me</a>
+					</ul>
+				</nav>
+            </section>
+            <section class="content">
+                <div class="info hide" id="info-about">
+                    <p>I'm a fun guy. I really enjon web development and learning new things. I am an adept of speedcubing and a huge fan of netflix and chill.</p>
+                    </div>
+                <div class="info hide" id="info-photo">
+                    <div class="gallery_cont">
+						<div class="photo_main">
+							<button id="prev_btn" class="btn">&#10094;</button>
+							<img src="photos/img0.jpg" alt="Photo 1" id="active_photo">
+							<button id="next_btn" class="btn">&#10095;</button>
+						</div>
+                        <div class="thumbnail-container">
+							<img src="photos/img1.jpg" alt="Photo 1" onclick="currentSlide(1)" class="thumbnail">
+							<img src="photos/img2.jpg" alt="Photo 2" onclick="currentSlide(2)" class="thumbnail">
+							<img src="photos/img3.jpg" alt="Photo 3" onclick="currentSlide(3)" class="thumbnail">
+							<img src="photos/img0.jpg" alt="Photo 4" onclick="currentSlide(0)" class="thumbnail">
+						</div>
 					</div>
-					<div class="column">
-						<img class="demo cursor" src="photos/img2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-					</div>
-					<div class="column">
-						<img class="demo cursor" src="photos/img3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-					</div>
-					<div class="column">
-						<img class="demo cursor" src="photos/img4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-					</div>
-					<div class="column">
-						<img class="demo cursor" src="photos/img5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-					</div>
-					<div class="column">
-						<img class="demo cursor" src="photos/img6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-					</div>
-				</div>	
-			</div>
-			<div class="info" id="info-portfolio">Information about portfolio...</div>
-			<div class="info" id="info-contact">Information about contact...</div>
-		</main>
-		<script src="script.js" defer></script>
-	</body>
+                </div>
+                <div class="info hide" id="info-portfolio">
+                    <div class="portfolio_content">
+                        <div class="card">
+                            <div id='card_title' class='card_title'>
+                                <div id='titleoftheproject' class='titleoftheproject'>
+                                Title of the project</div>
+                                </div>
+                                <div id='card_content' class='card_content'>
+                                    <div id='card_image' class='card_image'>
+                                    </div>
+                                    <div id='card_description' class='card_description'>
+                                    description of project bla bla bla bla rngenfgnvdkvbfdkj dvf vfdjvbdfb v fjvnbkdvb n v</div>
+                                </div>
+                            </div>
+                        <div class="card">
+                            <h1>2</h1>
+                        </div>
+                        <div class="card">
+                            <h1>3</h1>
+                        </div>
+                        <div class="card">
+                            <h1>4</h1>
+                        </div><div class="card">
+                            <h1>5</h1>
+                        </div>
+
+                    </div>
+                </div>
+			    <div class="info hide" id="info-contact">Information about contact...</div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div id="footer_text" class="text_shifted">
+                <p>Kabardiyadi Alisher's creation</p>
+            </div>
+        </footer>
+
+    <script src="script2.js"></script>
+    </body>
 </html>
