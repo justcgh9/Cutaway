@@ -34,6 +34,18 @@ function updatePhoto() {
     activePhoto.src = photo;
 }
 
+const scrollableDiv = document.querySelector('.portfolio_content');
+
+// requestAnimationFrame(() => {
+//     scrollableDiv.scrollTop = 0;
+// });
+
+
+scrollableDiv.addEventListener('wheel', (event) => {
+            event.preventDefault();
+            scrollableDiv.scrollTop += event.deltaY;
+            // console.log(scrollableDiv.scrollTop)
+});
 
 
     const aboutLink = document.getElementById("about");
@@ -58,6 +70,8 @@ function updatePhoto() {
                     currentInfo.classList.remove("hide");
                 }, { once: true });
             }
+            scrollableDiv.scrollTop = 0 
+            // console.log('hi' + scrollableDiv.scrollTop)
             info.classList.remove("hide");
             info.classList.add("show");
             currentInfo = info;

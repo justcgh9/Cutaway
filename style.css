@@ -168,7 +168,7 @@ main {
   grid-template-columns: 1fr 1fr;
   gap:4%;
   row-gap: 48%;
-  overflow-y: scroll;
+  overflow-y: hidden;
   justify-content: stretch;
   scroll-behavior: smooth;
 }
