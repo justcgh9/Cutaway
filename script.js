@@ -6,10 +6,10 @@ const activePhoto = document.getElementById('active_photo');
 
 let photosNum = 4;
 
-let photoInd = 0;
+let photoInd = 1;
 let photo = 'photos/img' + photoInd + '.jpg';
 
-
+updatePhoto()
 
 prevBtn.addEventListener('click', () => {
     photoInd = (photoInd - 1 + photosNum) % photosNum;
@@ -30,6 +30,9 @@ photos.forEach(photo => {
 
 function updatePhoto() {
     photo = 'photos/img' + photoInd + '.jpg';
+    photos.forEach(ph => {
+        ph.style.opacity = ph.id == photoInd ? 1 : 0.6;
+    })
     console.log(photo);
     activePhoto.src = photo;
 }
@@ -71,7 +74,6 @@ scrollableDiv.addEventListener('wheel', (event) => {
                 }, { once: true });
             }
             scrollableDiv.scrollTop = 0 
-            // console.log('hi' + scrollableDiv.scrollTop)
             info.classList.remove("hide");
             info.classList.add("show");
             currentInfo = info;
@@ -93,4 +95,3 @@ scrollableDiv.addEventListener('wheel', (event) => {
             this.style.opacity = "1";
         });
     });
-
