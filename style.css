@@ -304,3 +304,31 @@ main {
   color: #F9FBF8;
   opacity: 0.9;
 }
+
+#info-comic {
+    width: 100%;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.comic-btn {
+    margin-top: 10%;
+    width: 40%;
+    height: 50%;
+    background-color: #409919;
+    color: #ffffff;
+    border: 2px solid #000000;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 #000000;
+    transition: all 0.3s ease;
+}
+
+.comic-btn:hover {
+    background-color: #409919;
+    box-shadow: 3px 3px 0 #000000;
+    transform: translate(-2px, -2px);
+}

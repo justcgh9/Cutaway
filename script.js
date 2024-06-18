@@ -51,47 +51,55 @@ scrollableDiv.addEventListener('wheel', (event) => {
 });
 
 
-    const aboutLink = document.getElementById("about");
-    const photosLink = document.getElementById("photos");
-    const portfolioLink = document.getElementById("portfolio");
-    const contactLink = document.getElementById("contact");
+const aboutLink = document.getElementById("about");
+const photosLink = document.getElementById("photos");
+const portfolioLink = document.getElementById("portfolio");
+const contactLink = document.getElementById("contact");
+const comicLink = document.getElementById("comic");
 
-    const infoAbout = document.getElementById("info-about");
-    const infoPhotos = document.getElementById("info-photo");
-    const infoPortfolio = document.getElementById("info-portfolio");
-    const infoContact = document.getElementById("info-contact");
+const infoAbout = document.getElementById("info-about");
+const infoPhotos = document.getElementById("info-photo");
+const infoPortfolio = document.getElementById("info-portfolio");
+const infoContact = document.getElementById("info-contact");
+const infoComic = document.getElementById("info-comic");
 
-    let currentInfo = null;
+let currentInfo = null;
 
-    function setParallaxEffect(link, position, info) {
-        link.addEventListener("mouseenter", function() {
-            document.body.style.backgroundPosition = position;
-            if (currentInfo && currentInfo !== info) {
-                currentInfo.classList.remove("show");
-                currentInfo.classList.add("hide");
-                currentInfo.addEventListener('animationend', () => {
-                    currentInfo.classList.remove("hide");
-                }, { once: true });
-            }
-            scrollableDiv.scrollTop = 0 
-            info.classList.remove("hide");
-            info.classList.add("show");
-            currentInfo = info;
-        });
-    }
-
-    setParallaxEffect(aboutLink, 'center 45%', infoAbout);
-    setParallaxEffect(contactLink, 'center 52.5%', infoContact);
-    setParallaxEffect(portfolioLink, 'center 50%', infoPortfolio);
-    setParallaxEffect(photosLink, 'center 47.5%', infoPhotos);
-
-    document.querySelectorAll('.menu a').forEach(a => {
-        a.addEventListener('mouseenter', function() {
-            document.querySelectorAll('.menu a').forEach(el => {
-                el.style.transform = "scale(.95)";
-                el.style.opacity = ".5";
-            });
-            this.style.transform = "scale(1)";
-            this.style.opacity = "1";
-        });
+function setParallaxEffect(link, position, info) {
+    link.addEventListener("mouseenter", function() {
+        document.body.style.backgroundPosition = position;
+        if (currentInfo && currentInfo !== info) {
+            currentInfo.classList.remove("show");
+            currentInfo.classList.add("hide");
+            currentInfo.addEventListener('animationend', () => {
+                currentInfo.classList.remove("hide");
+            }, { once: true });
+        }
+        scrollableDiv.scrollTop = 0 
+        info.classList.remove("hide");
+        info.classList.add("show");
+        currentInfo = info;
     });
+}
+
+setParallaxEffect(aboutLink, 'center 45%', infoAbout);
+setParallaxEffect(contactLink, 'center 52.5%', infoContact);
+setParallaxEffect(portfolioLink, 'center 50%', infoPortfolio);
+setParallaxEffect(photosLink, 'center 47.5%', infoPhotos);
+setParallaxEffect(comicLink, 'center 55%', infoComic);
+
+document.querySelectorAll('.menu a').forEach(a => {
+    a.addEventListener('mouseenter', function() {
+        document.querySelectorAll('.menu a').forEach(el => {
+            el.style.transform = "scale(.95)";
+            el.style.opacity = ".5";
+        });
+        this.style.transform = "scale(1)";
+        this.style.opacity = "1";
+    });
+});
+
+const comicBtn = document.getElementById('comic-btn')
+comicBtn.addEventListener('click', () => {
+    window.open('comic.html', '_blank')
+});
