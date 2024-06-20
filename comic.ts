@@ -32,3 +32,5 @@ async function fetchComic(): Promise<undefined> {
 }
 
 fetchComic();
+
+export default fetchComic;

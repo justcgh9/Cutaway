@@ -96,3 +96,5 @@ const comicBtn = document.getElementById('comic-btn') as HTMLElement;
 comicBtn.addEventListener('click', () => {
     window.open('comic.html', '_blank');
 });
+
+export let something = 123;
