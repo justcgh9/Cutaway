@@ -48,7 +48,7 @@ jobs:
       run: npm install
 
     - name: Compile TypeScript
-      run: npm run build:ts
+      run: tsc
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
