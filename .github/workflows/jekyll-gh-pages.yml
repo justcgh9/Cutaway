@@ -52,6 +52,14 @@ jobs:
     - name: Install dependencies
       run: npm install -g --unsafe-perm=true --allow-root
 
+    - name: Set permissions on cache directories
+      run: |
+        sudo chown -R $(whoami) /home/ubuntu/.cache
+        sudo chown -R $(whoami) /home/ubuntu/.config
+        sudo chown -R $(whoami) /home/ubuntu/.local
+        sudo chown -R $(whoami) /home/ubuntu/.npm
+        sudo chown -R $(whoami) /home/ubuntu/.pm2
+
     - name: Compile TypeScript
       run: tsc
 
