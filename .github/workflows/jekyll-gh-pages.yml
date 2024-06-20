@@ -45,11 +45,7 @@ jobs:
       with:
         ruby-version: '2.7'  # Change this to your desired Ruby version
 
-    - name: Install Jekyll and Bundler
-      run: gem install jekyll bundler
 
-    - name: Build Jekyll site
-      run: bundle exec jekyll build
   # Deployment job
   deploy:
     environment:
