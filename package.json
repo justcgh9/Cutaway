@@ -1,0 +1,21 @@
+{
+    "name": "cutaway",
+    "version": "1.0.0",
+    "description": "My awesome portfolio website",
+    "main": "index.html",
+    "scripts": {
+      "build:ts": "tsc",
+      "build:jekyll": "jekyll build",
+      "build": "npm run build:ts && npm run build:jekyll",
+      "start": "jekyll serve"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/yourusername/your-repo.git"
+    },
+    "author": "justcgh9",
+    "devDependencies": {
+      "typescript": "^4.5.4"
+    }
+  }
+  
