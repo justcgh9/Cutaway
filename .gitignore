@@ -1,5 +1,4 @@
-/exp.html
-/s.js
+dist
 node_modules
-./comic.js
-./script.js
+comic.js
+script.js

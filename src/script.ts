@@ -7,7 +7,7 @@ const activePhoto = document.getElementById('active_photo') as HTMLImageElement;
 let photosNum = 4;
 
 let photoInd = 1;
-let photo = 'photos/img' + photoInd + '.jpg';
+let photo = '/photos/img' + photoInd + '.jpg';
 
 updatePhoto();
 
@@ -29,7 +29,7 @@ photos.forEach(photo => {
 });
 
 function updatePhoto(): void {
-    photo = 'photos/img' + photoInd + '.jpg';
+    photo = '/photos/img' + photoInd + '.jpg';
     photos.forEach(ph => {
         (ph as HTMLElement).style.opacity = ph.id == photoInd.toString() ? '1' : '0.6';
     });
@@ -96,5 +96,3 @@ const comicBtn = document.getElementById('comic-btn') as HTMLElement;
 comicBtn.addEventListener('click', () => {
     window.open('comic.html', '_blank');
 });
-
-export let something = 123;
