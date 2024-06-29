@@ -1,3 +1,5 @@
 # Manual
 
-To transpile the typescript to javascript run ```tsc``` in your terminal from the project root
+Install dependencies using ``` npm install ```
+
+To bundle type ``` npm run build ``` from the project root 
